@@ -1,0 +1,9 @@
+*.user
+/.vs
+[Bb]in/
+[Oo]bj/
+/.idea
+*.db
+wwwroot
+*.suo
+*.v2
