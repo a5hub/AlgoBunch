@@ -1,42 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CourseraAlgsSanDiego
 {
-    public class AlgorithmicWarmup
+    public class FibonacciNumber
     {
         public int FibonacciNaive(int n)
         {
             if (n <= 1)
                 return n;
-            else
-                return FibonacciNaive(n - 1) + FibonacciNaive(n - 2);
+
+            return FibonacciNaive(n - 1) + FibonacciNaive(n - 2);
         }
 
-        public int FibonacciFast(int n, int[] nums)
+        public long FibonacciFastCalc(int n, long[] nums)
         {
             if (n <= 1)
                 return n;
             if (nums[n - 1] != 0 && nums[n - 2] != 0)
             {
-                return nums[n - 1] + nums[n - 2];
+                return (long)nums[n - 1] + nums[n - 2];
             }
-            else
-            {
-                nums[n - 1] = FibonacciFast(n - 1, nums);
-                nums[n - 2] = FibonacciFast(n - 2, nums);
 
-                return nums[n - 1] + nums[n - 2];
-            }
-                
+            nums[n - 1] = FibonacciFastCalc(n - 1, nums);
+            nums[n - 2] = FibonacciFastCalc(n - 2, nums);
+
+            return (long)nums[n - 1] + nums[n - 2];
         }
 
-        public int FibonacciFastWrapped(int n)
+        public long FibonacciFast(int n)
         {
-            var nums = new int[n];
+            var nums = new long[n];
 
-            return FibonacciFast(n, nums);
+            return FibonacciFastCalc(n, nums);
         }
 
         public void StressTest(int M, int N)
@@ -49,11 +44,11 @@ namespace CourseraAlgsSanDiego
                 var watch1 = System.Diagnostics.Stopwatch.StartNew();
                 var result1 = FibonacciNaive(n);
                 watch1.Stop();
-                
+
                 var watch2 = System.Diagnostics.Stopwatch.StartNew();
-                var result2 = FibonacciFastWrapped(n);
+                var result2 = FibonacciFast(n);
                 watch2.Stop();
-                
+
                 Console.WriteLine(n);
                 Console.WriteLine($"Answer {result1} for {watch1.ElapsedMilliseconds} ms, {result2} for {watch2.ElapsedMilliseconds} ms");
 
@@ -68,16 +63,12 @@ namespace CourseraAlgsSanDiego
             }
         }
 
-        public void Main(string[] args)
+        void Main(string[] args)
         {
-            Console.ReadLine();
             var nStr = Console.ReadLine();
             var n = Int32.Parse(nStr);
 
-            var result = FibonacciNaive(n);
-
-            Console.WriteLine(result);
-            Console.ReadKey();
+            Console.WriteLine(FibonacciFast(n));
         }
     }
 }
