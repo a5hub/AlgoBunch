@@ -1,65 +1,39 @@
-﻿using HackerRank.InterviewPreparationKit.Arrays;
-using System;
-using LeetCode;
-using CourseraAlgsSanDiego;
+﻿using System;
 
 namespace AlgoBunch
 {
     class Program
     {
-        public static void StressTest(int N, int M)
+        public static int FibonacciFast(int n, int[] nums)
         {
-            var testedObject = new MaximumPairwiseProduct();
-
-            while (true)
+            if (n <= 1)
+                return n;
+            if (nums[n - 1] != 0 && nums[n - 2] != 0)
             {
-                var rnd = new Random();
-                var n = rnd.Next(2, N);
-                var ar = new int[n];
-                for (int i = 0; i < ar.Length; i++)
-                {
-                    ar[i] = rnd.Next(1, M);
-                }
-
-                foreach (var a in ar)
-                {
-                    Console.Write($"{a} ");
-                }
-                Console.WriteLine();
-
-                var result1 = testedObject.MaxPairwiseProductNaive(ar);
-                var result2 = testedObject.MaxPairwiseProductFast(ar);
-
-                if (result1 == result2)
-                {
-                    Console.WriteLine("OK");
-                }
-                else
-                {
-                    Console.WriteLine($"Wrong answer {result1}, {result2}");
-                    break;
-                }
+                return nums[n - 1] + nums[n - 2];
             }
+            else
+            {
+                nums[n - 1] = FibonacciFast(n - 1, nums);
+                nums[n - 2] = FibonacciFast(n - 2, nums);
 
-            Console.ReadKey();
+                return nums[n - 1] + nums[n - 2];
+            }
         }
+
+        public static int FibonacciFastWrapped(int n)
+        {
+            var nums = new int[n];
+
+            return FibonacciFast(n, nums);
+        }
+
         static void Main(string[] args)
         {
+            var nStr = Console.ReadLine();
+            var n = Int32.Parse(nStr);
 
-            StressTest(10000, 20000000);
-            //var testedObject = new MaximumPairwiseProduct();
-            //var arr = new [] { 100000, 90000 };
-            //var result = testedObject.MaxPairwiseProductFast(arr);
-
-            //Console.WriteLine(result);
-            //Console.ReadKey();
-
-            //foreach (var result in results)
-            //{
-            //    Console.WriteLine(result);
-            //}
-
-            //Console.ReadKey();
+            Console.WriteLine(FibonacciFastWrapped(n));
         }
     }
 }
