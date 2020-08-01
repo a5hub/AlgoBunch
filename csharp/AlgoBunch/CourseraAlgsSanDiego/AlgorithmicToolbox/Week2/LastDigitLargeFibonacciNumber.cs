@@ -4,59 +4,35 @@ namespace CourseraAlgsSanDiego
 {
     public class LastDigitLargeFibonacciNumber
     {
-        public int FibonacciLastDigitCalc(int n, int[] nums)
+        public static int FibonacciLastDigit(int n)
         {
             if (n <= 1)
                 return n;
-            if (nums[n - 1] != 0 && nums[n - 2] != 0)
+
+            var prev = 0;
+            var curr = 1;
+
+            for (int i = 2; i < n; i++)
             {
-                return (nums[n - 1] + nums[n - 2]) % 10;
+                var currTmp = curr;
+                curr = prev + curr;
+                prev = currTmp;
+
             }
 
-            nums[n - 1] = FibonacciLastDigitCalc(n - 1, nums);
-            nums[n - 2] = FibonacciLastDigitCalc(n - 2, nums);
-
-            return (nums[n - 1] + nums[n - 2]) % 10;
+            return curr;
         }
 
-
-        public int FibonacciLastDigit(int n)
-        {
-            var nums = new int[n];
-
-            return FibonacciLastDigitCalc(n, nums);
-        }
-
-        public void StressTest(int M, int N)
+        void Main(string[] args)
         {
             while (true)
             {
-                var rnd = new Random();
-                var n = rnd.Next(M, N);
-
-                var fibNum = new FibonacciNumber();
-
-                var watch1 = System.Diagnostics.Stopwatch.StartNew();
-                var result1 = fibNum.FibonacciFast(n) % 10;
-                watch1.Stop();
-
-                var watch2 = System.Diagnostics.Stopwatch.StartNew();
-                var result2 = FibonacciLastDigit(n);
-                watch2.Stop();
-
-                Console.WriteLine(n);
-                Console.WriteLine($"Answer {result1} for {watch1.ElapsedMilliseconds} ms, {result2} for {watch2.ElapsedMilliseconds} ms");
-
-                if (result1 == result2)
-                {
-                    Console.WriteLine("OK");
-                }
-                else
-                {
-                    break;
-                }
+                var nStr = Console.ReadLine();
+                var n = Int32.Parse(nStr);
+                Console.WriteLine(FibonacciLastDigit(n));
             }
         }
-
     }
+
+    
 }

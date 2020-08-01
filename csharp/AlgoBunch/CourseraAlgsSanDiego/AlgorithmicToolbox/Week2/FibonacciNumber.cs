@@ -18,13 +18,13 @@ namespace CourseraAlgsSanDiego
                 return n;
             if (nums[n - 1] != 0 && nums[n - 2] != 0)
             {
-                return (long)nums[n - 1] + nums[n - 2];
+                return nums[n - 1] + nums[n - 2];
             }
 
             nums[n - 1] = FibonacciFastCalc(n - 1, nums);
             nums[n - 2] = FibonacciFastCalc(n - 2, nums);
 
-            return (long)nums[n - 1] + nums[n - 2];
+            return nums[n - 1] + nums[n - 2];
         }
 
         public long FibonacciFast(int n)
