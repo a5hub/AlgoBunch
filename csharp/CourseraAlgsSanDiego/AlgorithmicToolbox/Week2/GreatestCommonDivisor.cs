@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CourseraAlgsSanDiego
 {
-    public class GDC
+    public class GreatestCommonDivisor
     {
-        public static long CdcCalc(long A, long B)
+        public static long GDC(long A, long B)
         {
             if (B == 0)
                 return A;
@@ -15,7 +15,7 @@ namespace CourseraAlgsSanDiego
             var first = B;
             var truncatedDivider = Math.Truncate(divided);
             var second = (long)(A - B * truncatedDivider);
-            return CdcCalc(first, second);
+            return GDC(first, second);
         }
 
         static void Main(string[] args)
@@ -31,7 +31,7 @@ namespace CourseraAlgsSanDiego
                 {
                     ar[i] = Int64.Parse(tokens[i]);
                 }
-                Console.WriteLine(CdcCalc(ar[0], ar[1]));
+                Console.WriteLine(GDC(ar[0], ar[1]));
             }
         }
     }
