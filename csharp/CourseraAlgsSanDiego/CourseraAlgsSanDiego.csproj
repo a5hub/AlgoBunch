@@ -8,8 +8,4 @@
     <Compile Remove="AlgorithmicToolbox\Week2\FibonacciSumLastDigit.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="AlgorithmicToolbox\Week2\FibonacciSumLastDigit.cs" />
-  </ItemGroup>
-
 </Project>

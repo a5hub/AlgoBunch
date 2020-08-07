@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace CourseraAlgsSanDiego
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
 {
-    public class LeastCommonMultiple
+    public class Task4LeastCommonMultiple
     {
         public static long LeastCommonMultipleCalc(long A, long B)
         {

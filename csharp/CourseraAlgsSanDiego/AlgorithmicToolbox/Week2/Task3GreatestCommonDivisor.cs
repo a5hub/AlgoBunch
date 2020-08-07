@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
 {
-    public class GreatestCommonDivisor
+    public class Task3GreatestCommonDivisor
     {
         public static long GDC(long A, long B)
         {

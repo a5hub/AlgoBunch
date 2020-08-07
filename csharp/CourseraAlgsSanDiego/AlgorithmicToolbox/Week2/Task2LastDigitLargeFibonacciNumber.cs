@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace CourseraAlgsSanDiego
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
 {
-    public class LastDigitLargeFibonacciNumber
+    public class Task2LastDigitLargeFibonacciNumber
     {
         public static int FibonacciLastDigit(int n)
         {
