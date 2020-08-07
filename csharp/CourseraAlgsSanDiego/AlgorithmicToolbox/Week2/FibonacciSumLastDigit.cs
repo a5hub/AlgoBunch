@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 
-namespace AlgoBunch
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
 {
-    class Program
+    public class FibonacciSumLastDigit
     {
         public static Tuple<bool, List<int>> FindPisanoPeriod(long n, int divider)
         {
@@ -22,7 +22,7 @@ namespace AlgoBunch
                 return new Tuple<bool, List<int>>(false, pisanoPeriod);
             }
 
-            for (int i = 2; i <= n; i++)
+            for (long i = 2; i <= n; i++)
             {
                 int tmpPrevious = previous;
                 previous = current;
@@ -43,41 +43,36 @@ namespace AlgoBunch
             return new Tuple<bool, List<int>>(true, pisanoPeriod);
         }
 
-        public static long FibonacciLastDigitHuge(long n)
+        public static long FubonacciSumLastNumber(long n)
         {
-            var pisanoPeriod = FindPisanoPeriod(n, 10);
+            var changedNumber = n + 2;
+            var pisanoPeriod = FindPisanoPeriod(changedNumber, 10);
             if (pisanoPeriod.Item1 == false)
             {
-                return pisanoPeriod.Item2.Last();
+                return pisanoPeriod.Item2.Last() - 1;
             }
 
             var ppLength = pisanoPeriod.Item2.Count - 2;
-            var index = n % ppLength;
+            var index = changedNumber % ppLength;
 
-            return pisanoPeriod.Item2[(int)index];
+            var FLastDgigtChangedNumber = pisanoPeriod.Item2[(int)index];
+
+            if (FLastDgigtChangedNumber == 0)
+                FLastDgigtChangedNumber = 10;
+
+            return FLastDgigtChangedNumber - 1;
         }
 
 
         static void Main(string[] args)
         {
-            while (true)
-            {
-                var fStr = Console.ReadLine();
+            var fStr = Console.ReadLine();
 
-                var number = Int64.Parse(fStr);
+            var number = Int64.Parse(fStr);
 
-                var watch1 = System.Diagnostics.Stopwatch.StartNew();
-                for (int i = 0; i <= number; i++)
-                {
-                    var result = FibonacciLastDigitHuge(i);
-                }
-                watch1.Stop();
-                Console.WriteLine(watch1.ElapsedMilliseconds);
-            }
+            var result = FubonacciSumLastNumber(number);
 
-
-
-
+            Console.WriteLine(result);
 
         }
     }
