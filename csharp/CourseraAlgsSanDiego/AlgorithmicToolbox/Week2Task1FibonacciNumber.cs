@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task1FibonacciNumber
+    public class Week2Task1FibonacciNumber
     {
         public int FibonacciNaive(int n)
         {

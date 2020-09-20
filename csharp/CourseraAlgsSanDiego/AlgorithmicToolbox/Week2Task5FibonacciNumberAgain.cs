@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task5FibonacciNumberAgain
+    public class Week2Task5FibonacciNumberAgain
     {
         public static Tuple<bool, List<int>> FindPisanoPeriod(long n, int divider)
         {

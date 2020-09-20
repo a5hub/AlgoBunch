@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task6LastDigitOfTheSumOfFibonacciNumbers
+    public class Week2Task7LastDigitOfTheSumOfFibonacciNumbersAgain
     {
         public static Tuple<bool, List<int>> FindPisanoPeriod(long n, int divider)
         {
@@ -44,34 +43,53 @@ namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
             return new Tuple<bool, List<int>>(true, pisanoPeriod);
         }
 
-        public static long FubonacciSumLastNumber(long n)
+        public static long FSumLastDigit(long n, int divider)
         {
             var changedNumber = n + 2;
-            var pisanoPeriod = FindPisanoPeriod(changedNumber, 10);
+            var pisanoPeriod = FindPisanoPeriod(changedNumber, divider);
             if (pisanoPeriod.Item1 == false)
             {
                 return pisanoPeriod.Item2.Last() - 1;
             }
-        
+
             var ppLength = pisanoPeriod.Item2.Count - 2;
             var index = changedNumber % ppLength;
-        
+
             var FLastDgigtChangedNumber = pisanoPeriod.Item2[(int)index];
-        
+
             if (FLastDgigtChangedNumber == 0)
                 FLastDgigtChangedNumber = 10;
-        
-            return FLastDgigtChangedNumber - 1;
+
+            return FLastDgigtChangedNumber - 1; 
+        }
+
+        public static long Calculate(long first, long second)
+        {
+            var firstSumLastDigit = FSumLastDigit(first - 1, 100);
+            var secondSumLastDigit = FSumLastDigit(second, 100);
+
+            if (firstSumLastDigit >= secondSumLastDigit)
+            {
+                secondSumLastDigit = secondSumLastDigit + 100;
+            }
+
+            var result = (secondSumLastDigit - firstSumLastDigit) % 10;
+
+            return result;
         }
 
         static void Main(string[] args)
         {
-            var fStr = Console.ReadLine();
+            var arrStr = Console.ReadLine();
+            var tokens = arrStr.Split(' ');
+            var ar = new long[tokens.Length];
+
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                ar[i] = long.Parse(tokens[i]);
+            }
         
-            var number = Int64.Parse(fStr);
-        
-            var result = FubonacciSumLastNumber(number);
-        
+            var result = Calculate(ar[0], ar[1]);
             Console.WriteLine(result);
         }
     }

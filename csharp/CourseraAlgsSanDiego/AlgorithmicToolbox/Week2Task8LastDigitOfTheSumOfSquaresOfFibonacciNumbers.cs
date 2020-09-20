@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week2
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task8LastDigitOfTheSumOfSquaresOfFibonacciNumbers
+    public class Week2Task8LastDigitOfTheSumOfSquaresOfFibonacciNumbers
     {
         public static Tuple<bool, List<int>> FindPisanoPeriod(long n, int divider)
         {
