@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CourseraAlgsSanDiego.AlgorithmicToolbox.Week5;
+using CourseraAlgsSanDiego.AlgorithmicToolbox;
 using Xunit;
 
 namespace CourseraAlgsSanDiegoTests
 {
     public class Task4LongestCommonSubsequenceOfTwoTests
     {
-        Task4LongestCommonSubsequenceOfTwo target = new Task4LongestCommonSubsequenceOfTwo();
+        Week5Task4LongestCommonSubsequenceOfTwo target = new Week5Task4LongestCommonSubsequenceOfTwo();
         
         [Fact]
         public void EditDistanceTest_SameSubsequences()
