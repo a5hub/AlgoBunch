@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task2FractionalKnapsack
+    class Week3Task2FractionalKnapsack
     {
         private static void QuickSortTwoDimArrayAsc(decimal[,] arr, int column, int start, int end)
         {

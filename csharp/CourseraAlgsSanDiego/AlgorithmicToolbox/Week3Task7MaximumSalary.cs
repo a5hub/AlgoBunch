@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task7MaximumSalary
+    class Week3Task7MaximumSalary
     {
         private static bool IsGreaterOrEqualForSalary(int a, int b)
         {

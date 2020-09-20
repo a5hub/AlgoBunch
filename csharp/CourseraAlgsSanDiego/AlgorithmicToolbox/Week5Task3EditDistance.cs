@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week5
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task3EditDistance
+    class Week5Task3EditDistance
     {
          public static int[][] EditDistance(List<char> A, List<char> B)
         {

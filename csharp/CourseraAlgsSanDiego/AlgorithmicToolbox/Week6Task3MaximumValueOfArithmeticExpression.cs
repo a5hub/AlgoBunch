@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using static System.Math;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week6
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
     public class Week6Task3MaximumValueOfArithmeticExpression
     {

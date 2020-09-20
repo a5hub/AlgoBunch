@@ -23,40 +23,30 @@
       <e p="AlgoBunch.sln" t="IncludeFlat" />
       <e p="CourseraAlgsSanDiego" t="IncludeRecursive">
         <e p="AlgorithmicToolbox" t="Include">
-          <e p="Week1" t="Include">
-            <e p="MaximumPairwiseProduct.cs" t="Include" />
-          </e>
+          <e p="Week1Task1MaximumPairwiseProduct.cs" t="Include" />
           <e p="Week2Task1FibonacciNumber.cs" t="Include" />
           <e p="Week2Task2LastDigitLargeFibonacciNumber.cs" t="Include" />
           <e p="Week2Task3GreatestCommonDivisor.cs" t="Include" />
+          <e p="Week2Task4LeastCommonMultiple.cs" t="Include" />
           <e p="Week2Task5FibonacciNumberAgain.cs" t="Include" />
           <e p="Week2Task6LastDigitOfTheSumOfFibonacciNumbers.cs" t="Include" />
           <e p="Week2Task7LastDigitOfTheSumOfFibonacciNumbersAgain.cs" t="Include" />
           <e p="Week2Task8LastDigitOfTheSumOfSquaresOfFibonacciNumbers.cs" t="Include" />
-          <e p="Week2Week2Task4LeastCommonMultiple.cs" t="Include" />
-          <e p="Week3" t="Include">
-            <e p="Task1MoneyChange.cs" t="Include" />
-            <e p="Task2FractionalKnapsack.cs" t="Include" />
-            <e p="Task3CarFueling.cs" t="Include" />
-            <e p="Task4MaximumAdvertisementRevenue.cs" t="Include" />
-            <e p="Task5CollectingSignatures.cs" t="Include" />
-            <e p="Task6MaximumNumberOfPrizes.cs" t="Include" />
-            <e p="Task7MaximumSalary.cs" t="Include" />
-          </e>
-          <e p="Week4" t="Include">
-            <e p="Task1BinarySearch.cs" t="Include" />
-            <e p="Task2MajorityElement.cs" t="Include" />
-          </e>
-          <e p="Week5" t="Include">
-            <e p="Task1MoneyChangeAgain.cs" t="Include" />
-            <e p="Task2PrimitiveCalculator.cs" t="Include" />
-            <e p="Task3EditDistance.cs" t="Include" />
-            <e p="Task4LongestCommonSubsequenceOfTwo.cs" t="Include" />
-          </e>
-          <e p="Week6" t="Include">
-            <e p="Week6Task1MaximumAmountOfGold.cs" t="Include" />
-            <e p="Week6Task3MaximumValueOfArithmeticExpression.cs" t="Include" />
-          </e>
+          <e p="Week3Task1MoneyChange.cs" t="Include" />
+          <e p="Week3Task2FractionalKnapsack.cs" t="Include" />
+          <e p="Week3Task3CarFueling.cs" t="Include" />
+          <e p="Week3Task4MaximumAdvertisementRevenue.cs" t="Include" />
+          <e p="Week3Task5CollectingSignatures.cs" t="Include" />
+          <e p="Week3Task6MaximumNumberOfPrizes.cs" t="Include" />
+          <e p="Week3Task7MaximumSalary.cs" t="Include" />
+          <e p="Week4Task1BinarySearch.cs" t="Include" />
+          <e p="Week4Task2MajorityElement.cs" t="Include" />
+          <e p="Week5Task1MoneyChangeAgain.cs" t="Include" />
+          <e p="Week5Task2PrimitiveCalculator.cs" t="Include" />
+          <e p="Week5Task3EditDistance.cs" t="Include" />
+          <e p="Week5Task4LongestCommonSubsequenceOfTwo.cs" t="Include" />
+          <e p="Week6Task1MaximumAmountOfGold.cs" t="Include" />
+          <e p="Week6Task3MaximumValueOfArithmeticExpression.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="CourseraAlgsSanDiego.csproj" t="IncludeRecursive" />

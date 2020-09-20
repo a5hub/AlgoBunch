@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task6MaximumNumberOfPrizes
+    class Week3Task6MaximumNumberOfPrizes
     {
          private static Tuple<int, List<int>> Calculate(int n)
         {

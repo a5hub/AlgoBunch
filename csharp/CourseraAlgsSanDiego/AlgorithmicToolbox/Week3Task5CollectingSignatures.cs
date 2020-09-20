@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task5CollectingSignatures
+    class Week3Task5CollectingSignatures
     {
          private static void QuickSortTwoDimArrayAsc(int[,] arr, int column, int start, int end)
         {

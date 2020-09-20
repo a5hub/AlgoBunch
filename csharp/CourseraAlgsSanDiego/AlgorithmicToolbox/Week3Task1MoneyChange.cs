@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task1MoneyChange
+    public class Week3Task1MoneyChange
     {
         private static int Calculate(int n)
         {

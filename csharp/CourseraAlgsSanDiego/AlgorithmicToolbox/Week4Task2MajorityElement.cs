@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week4
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task2MajorityElement
+    class Week4Task2MajorityElement
     {
         /* Function to find the candidate for Majority */
         static int findCandidate(List<int> a, int size)  

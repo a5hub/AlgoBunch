@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week5
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task1MoneyChangeAgain
+    class Week5Task1MoneyChangeAgain
     {
         //1, 3, 4
         public static int Calculate(int money, int[] coins)

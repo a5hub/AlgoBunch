@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task3CarFueling
+    class Week3Task3CarFueling
     {
         private static int Calculate(List<int> stops, int capacity)
         {

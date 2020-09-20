@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week5
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class Task4LongestCommonSubsequenceOfTwo
+    public class Week5Task4LongestCommonSubsequenceOfTwo
     {
         public Tuple<int[][], int> EditDistance<T>(List<T> A, List<T> B)
         {

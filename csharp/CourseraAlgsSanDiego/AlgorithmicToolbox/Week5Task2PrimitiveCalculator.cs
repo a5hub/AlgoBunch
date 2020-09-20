@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week5
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task2PrimitiveCalculator
+    class Week5Task2PrimitiveCalculator
     {
         // +1, x2, x3
         public static Dictionary<int, Tuple<int, int>> Calculate(int number)

@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week4
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task1BinarySearch
+    class Week4Task1BinarySearch
     {
         private static int BinarySearch(List<int> array, int number, int start, int end)
         {

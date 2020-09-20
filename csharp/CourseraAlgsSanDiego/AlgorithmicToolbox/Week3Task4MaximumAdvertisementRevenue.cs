@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week3
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    class Task4MaximumAdvertisementRevenue
+    class Week3Task4MaximumAdvertisementRevenue
     {
         private static decimal Calculate(List<decimal> first, List<decimal> second)
         {

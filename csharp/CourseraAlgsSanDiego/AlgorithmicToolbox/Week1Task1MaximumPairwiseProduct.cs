@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace CourseraAlgsSanDiego
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
-    public class MaximumPairwiseProduct
+    public class Week1Task1MaximumPairwiseProduct
     {
         /// <summary> stress test O(n^2) and O(n) solution </summary>
         public static void StressTest(int N, int M)
         {
-            var testedObject = new MaximumPairwiseProduct();
+            var testedObject = new Week1Task1MaximumPairwiseProduct();
 
             while (true)
             {

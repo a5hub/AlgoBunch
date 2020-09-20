@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace CourseraAlgsSanDiego.AlgorithmicToolbox.Week6
+namespace CourseraAlgsSanDiego.AlgorithmicToolbox
 {
     public class Week6Task1MaximumAmountOfGold
     {
