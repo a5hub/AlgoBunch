@@ -1,86 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace AlgoBunch
 {
     class Program
     {
-       public static Tuple<bool, List<int>> FindPisanoPeriod(long n, int divider)
+        private static Dictionary<char, char> parentheses = new Dictionary<char, char>
         {
-            var pisanoPeriod = new List<int> { 0, 1 };
+            {'(', ')'},
+            {'[', ']'},
+            {'{', '}'}
+        };
 
-            int previous = 0;
-            int current = 1;
+        public static string CheckBrackets(string expression)
+        {
+            var brackets = new Stack<char>();
+            var numbers = new Stack<int>();
 
-            if (n == 0 || divider == 0)
+            var position = 0;
+            foreach (char s in expression)
             {
-                return new Tuple<bool, List<int>>(false, new List<int> { 0 });
-            }
-            if (n <= 2)
-            {
-                return new Tuple<bool, List<int>>(false, pisanoPeriod);
-            }
-
-            for (long i = 2; i <= n; i++)
-            {
-                int tmpPrevious = previous;
-                previous = current;
-                current = (tmpPrevious + current) % divider;
-                pisanoPeriod.Add(current);
-
-                if (previous == 0 && current == 1)
+                position++;
+                if (parentheses.ContainsKey(s))
                 {
-                    break;
+                    brackets.Push(s);
+                    numbers.Push(position);
                 }
-
-                if (i == n)
+                else if(parentheses.ContainsValue(s))
                 {
-                    return new Tuple<bool, List<int>>(false, pisanoPeriod);
+                    if (brackets.Count == 0)
+                    {
+                        return position.ToString();
+                    }
+
+                    var top = brackets.Pop();
+                    numbers.Pop();
+                    if(s != parentheses[top])
+                    {
+                        return position.ToString();
+                    }
                 }
             }
 
-            return new Tuple<bool, List<int>>(true, pisanoPeriod);
-        }
-
-        /// <summary> Calculate last digit from Fibonacci number </summary>
-        /// <param name="n"> Number to calculate it's last number of Fib.</param>
-        public static long CalcFnLastDigit(long n)
-        {
-            var divider = 10;
-            var pisanoPeriod = FindPisanoPeriod(n, divider);
-            if (pisanoPeriod.Item1 == false)
+            if (brackets.Count != 0)
             {
-                return pisanoPeriod.Item2.Last();
+                return numbers.Pop().ToString();
             }
-
-            var ppLength = pisanoPeriod.Item2.Count - 2;
-            var index = n % ppLength;
-
-            var FLastDgigtChangedNumber = pisanoPeriod.Item2[(int)index];
-
-            if (FLastDgigtChangedNumber == 0)
-                FLastDgigtChangedNumber = 10;
-
-            return FLastDgigtChangedNumber; 
-        }
-
-        public static long Calculate(long n)
-        {
-            var fnLastDigit = CalcFnLastDigit(n);
-            var previousFnLastDigit = CalcFnLastDigit(n - 1);
-
-            return fnLastDigit * (fnLastDigit + previousFnLastDigit) % 10;
+            
+            return "Success";
         }
 
         static void Main(string[] args)
         {
-            var nStr = Console.ReadLine();
-            var n = Int64.Parse(nStr);
-            
-            var result = Calculate(n);
-            
-            Console.WriteLine(result); 
+            while(true)
+            {
+                var expression = Console.ReadLine();
+
+                var result = CheckBrackets(expression);
+
+                Console.WriteLine(result);
+            }
         }
     }
 }
